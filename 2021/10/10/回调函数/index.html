@@ -8,11 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Blog Share</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="&amp;#x9996;&amp;#x5148;&amp;#x56DE;&amp;#x8C03;&amp;#x51FD;&amp;#x6570;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7EC4;&amp;#x6210;&amp;#x5206;&amp;#x4E3A;3&amp;#x90E8;&amp;#x5206;&amp;#xFF1A; &amp;#x51FD;&amp;#x6570;&amp;#x4F53;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x5B9E;&amp;#x73B0; Compi">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Blog Share">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/10/10/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Blog Share">
+<meta property="og:description" content="&amp;#x9996;&amp;#x5148;&amp;#x56DE;&amp;#x8C03;&amp;#x51FD;&amp;#x6570;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7EC4;&amp;#x6210;&amp;#x5206;&amp;#x4E3A;3&amp;#x90E8;&amp;#x5206;&amp;#xFF1A; &amp;#x51FD;&amp;#x6570;&amp;#x4F53;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x5B9E;&amp;#x73B0; Compi">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-10T14:46:24.578Z">
+<meta property="article:modified_time" content="2021-10-24T04:09:47.586Z">
 <meta property="article:author" content="Hansen Liu">
 <meta name="twitter:card" content="summary">
   
@@ -150,116 +154,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-有限状态机（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="&#x6709;&#x9650;&#x72B6;&#x6001;&#x673A;&#xFF08;&#x4E00;&#xFF09;"><a href="#&#x6709;&#x9650;&#x72B6;&#x6001;&#x673A;&#xFF08;&#x4E00;&#xFF09;" class="headerlink" title="&#x6709;&#x9650;&#x72B6;&#x6001;&#x673A;&#xFF08;&#x4E00;&#xFF09;"></a>&#x6709;&#x9650;&#x72B6;&#x6001;&#x673A;&#xFF08;&#x4E00;&#xFF09;</h1><p>&#x53C2;&#x8003;&#x535A;&#x5BA2;&#xFF1A;</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012846795/article/details/109506926">https://blog.csdn.net/u012846795/article/details/109506926</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.freesion.com/article/6759807345/">https://www.freesion.com/article/6759807345/</a></li>
-</ul>
-<h2 id="&#x9700;&#x6C42;&#xFF1A;"><a href="#&#x9700;&#x6C42;&#xFF1A;" class="headerlink" title="&#x9700;&#x6C42;&#xFF1A;"></a>&#x9700;&#x6C42;&#xFF1A;</h2><p>&#x5F53;&#x7528;&#x6237;&#x6BCF;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;&#x5C31;&#x4F1A;&#x81F3;&#x5C11;&#x4EA7;&#x751F;&#x4E24;&#x79CD;&#x4EE5;&#x4E0A;&#x7684;&#x7ED3;&#x679C;&#xFF1B;&#x6211;&#x65B9;&#x9700;&#x8981;&#x6839;&#x636E;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x548C;&#x7528;&#x6237;&#xFF08;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#x7684;&#x52A8;&#x4F5C;&#x6765;&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x673A;&#x3002;</p>
-<h2 id="&#x5C40;&#x9650;"><a href="#&#x5C40;&#x9650;" class="headerlink" title="&#x5C40;&#x9650;"></a>&#x5C40;&#x9650;</h2><ul>
-<li>&#x9700;&#x8981;&#x63D0;&#x524D;&#x77E5;&#x9053;&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
-</ul>
-<h3 id="&#x57FA;&#x7840;&#x6982;&#x5FF5;&#xFF1A;"><a href="#&#x57FA;&#x7840;&#x6982;&#x5FF5;&#xFF1A;" class="headerlink" title="&#x57FA;&#x7840;&#x6982;&#x5FF5;&#xFF1A;"></a>&#x57FA;&#x7840;&#x6982;&#x5FF5;&#xFF1A;</h3><p>&#x5728;&#x63CF;&#x8FF0;&#x6709;&#x9650;&#x72B6;&#x6001;&#x673A;&#x65F6;&#xFF0C;&#x72B6;&#x6001;&#x3001;&#x4E8B;&#x4EF6;&#x3001;&#x8F6C;&#x6362;&#x548C;&#x52A8;&#x4F5C;&#x662F;&#x7ECF;&#x5E38;&#x4F1A;&#x78B0;&#x5230;&#x7684;&#x51E0;&#x4E2A;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x3002;</p>
-<ul>
-<li>&#x72B6;&#x6001;&#xFF08;State&#xFF09;&#x3000;&#x6307;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x5728;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x72B6;&#x51B5;&#xFF0C;&#x5904;&#x4E8E;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x72B6;&#x6001;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x5FC5;&#x7136;&#x4F1A;&#x6EE1;&#x8DB3;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x3001;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x52A8;&#x4F5C;&#x6216;&#x8005;&#x662F;&#x7B49;&#x5F85;&#x67D0;&#x4E9B;&#x4E8B;&#x4EF6;&#x3002;</li>
-<li>&#x4E8B;&#x4EF6;&#xFF08;Event&#xFF09;&#x3000;&#x6307;&#x7684;&#x662F;&#x5728;&#x65F6;&#x95F4;&#x548C;&#x7A7A;&#x95F4;&#x4E0A;&#x5360;&#x6709;&#x4E00;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x72B6;&#x6001;&#x673A;&#x6765;&#x8BB2;&#x662F;&#x6709;&#x610F;&#x4E49;&#x7684;&#x90A3;&#x4E9B;&#x4E8B;&#x60C5;&#x3002;&#x4E8B;&#x4EF6;&#x901A;&#x5E38;&#x4F1A;&#x5F15;&#x8D77;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x8FC1;&#xFF0C;&#x4FC3;&#x4F7F;&#x72B6;&#x6001;&#x673A;&#x4ECE;&#x4E00;&#x79CD;&#x72B6;&#x6001;&#x5207;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x79CD;&#x72B6;&#x6001;&#x3002;</li>
-<li>&#x8F6C;&#x6362;&#xFF08;Transition&#xFF09;&#x3000;&#x6307;&#x7684;&#x662F;&#x4E24;&#x4E2A;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x79CD;&#x5173;&#x7CFB;&#xFF0C;&#x8868;&#x660E;&#x5BF9;&#x8C61;&#x5C06;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x5B9A;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x5E76;&#x5C06;&#x5728;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;- &#x540C;&#x65F6;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#x8FDB;&#x5165;&#x7B2C;&#x4E8C;&#x4E2A;&#x72B6;&#x6001;&#x3002;</li>
-<li>&#x52A8;&#x4F5C;&#xFF08;Action&#xFF09;&#x3000;&#x6307;&#x7684;&#x662F;&#x72B6;&#x6001;&#x673A;&#x4E2D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x90A3;&#x4E9B;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x8C13;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x6307;&#x7684;&#x662F;&#x5B83;&#x4EEC;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x80FD;&#x88AB;&#x5176;&#x4ED6;&#x6D88;&#x606F;&#x6240;&#x4E2D;&#x65AD;&#xFF0C;&#x5FC5;&#x987B;&#x4E00;&#x76F4;&#x6267;&#x884C;&#x4E0B;&#x53BB;&#x3002;</li>
-</ul>
-<p>&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7F16;&#x7A0B;&#x4F8B;&#x5B50;&#xFF1A;</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012846795/article/details/115038163?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163495913916780261999952%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=163495913916780261999952&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-4-115038163.pc_v2_rank_blog_default&amp;utm_term=%E7%8A%B6%E6%80%81%E6%9C%BA&amp;spm=1018.2226.3001.4450">https://blog.csdn.net/u012846795/article/details/115038163?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163495913916780261999952%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&amp;request_id=163495913916780261999952&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-4-115038163.pc_v2_rank_blog_default&amp;utm_term=%E7%8A%B6%E6%80%81%E6%9C%BA&amp;spm=1018.2226.3001.4450</a></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/be365bf171c6a357b9e183bd84849f0f.png" alt="img"></p>
-<p>code1:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">switch (state)  {</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Opened&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Opened): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Open</span><br><span class="line">    open();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;CloseDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (closeDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Closed</span><br><span class="line">      changeState(Closed)</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Closed&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Closed): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Close</span><br><span class="line">    close();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;OpenDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (openDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Opened</span><br><span class="line">      changeState(Opened);</span><br><span class="line">    }</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;LockDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (lockDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Locked</span><br><span class="line">      changeState(Locked);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Locked&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Locked): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Lock</span><br><span class="line">    lock();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;UnlockDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (unlockDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Unlocked</span><br><span class="line">      changeState(Unlocked);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Unlocked&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Unlocked): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Unlock</span><br><span class="line">    unlock();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;LockDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (lockDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Locked</span><br><span class="line">      changeState(Locked)</span><br><span class="line">    }</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;OpenDoor&#x4E8B;&#x4EF6;</span><br><span class="line">    if (openDoor()) {</span><br><span class="line">      // &#x5F53;&#x524D;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x4E3A;Opened</span><br><span class="line">      changeSate(Opened);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<p>&#x4E3A;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x72B6;&#x6001;&#x662F;&#x5426;&#x6539;&#x53D8;&#x548C;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x5207;&#x6362;&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF1B;&#x5982;&#x679C;&#x60F3;&#x8981;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x597D;&#x8FFD;&#x8E2A;&#xFF0C;&#x5C31;&#x5728;&#x672C;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x5207;&#x6362;&#xFF0C;&#x5C31;&#x662F;&#x5C06;&#x72B6;&#x6001;&#x4F5C;&#x4E3A;&#x72B6;&#x6001;&#x5207;&#x6362;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5982;code2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">static uint8_t state;	// &#x662F;&#x4E00;&#x79CD;&#x679A;&#x4E3E;</span><br><span class="line">uint8_t action;			// &#x4E00;&#x79CD;&#x679A;&#x4E3E;</span><br><span class="line">switch (state)  {</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Opened&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Opened): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Open</span><br><span class="line">    open();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span><br><span class="line">    if (action = checkStateChange()) {</span><br><span class="line">      // &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span><br><span class="line">      state = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Closed&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Closed): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Close</span><br><span class="line">    close();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span><br><span class="line">    if (action = checkStateChange()) {</span><br><span class="line">      // &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span><br><span class="line">      state = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Locked&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Locked): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Lock</span><br><span class="line">    lock();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span><br><span class="line">    if (action = checkStateChange()) {</span><br><span class="line">      // &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span><br><span class="line">      state = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line"> </span><br><span class="line">  // &#x5904;&#x7406;&#x72B6;&#x6001;Unlocked&#x7684;&#x5206;&#x652F;</span><br><span class="line">  case (Unlocked): {</span><br><span class="line">    // &#x6267;&#x884C;&#x52A8;&#x4F5C;Lock</span><br><span class="line">    unlock();</span><br><span class="line">    // &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span><br><span class="line">    if (action = checkStateChange()) {</span><br><span class="line">      // &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span><br><span class="line">      state = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">    break;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<p>&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x7684;&#x7F3A;&#x9677;&#x4E5F;&#x975E;&#x5E38;&#x660E;&#x663E;&#xFF0C;&#x5982;&#x679C;&#x628A;performStateChange1&#x6210;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x5C06;&#x975E;&#x5E38;&#x590D;&#x6742;&#xFF0C;&#x5982;&#x679C;&#x5206;&#x5F00;&#x5199;performStateChange1-4&#x5C31;&#x884C;&#x6709;4&#x4E2A;&#x51FD;&#x6570;&#xFF0C;4&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x90FD;&#x6709;siwtch&#x3002;</p>
-<p>&#x53EF;&#x7528;&#x77E5;&#x4E4E;&#x4E0A;&#x7684;&#x56DE;&#x7B54;&#xFF1A;&#x4E0D;&#x8981;&#x7528;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x6570;&#x7EC4;&#x3002;<br>&#x5C06;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x4E0B;&#x6807;&#x4F5C;&#x4E3A;&#x72B6;&#x6001;&#x3002;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x8DF3;&#x8F6C;&#x6BD4;&#x6761;&#x4EF6;&#x8DF3;&#x8F6C;&#x66F4;&#x5FEB;&#xFF0C;&#x4EE5;&#x53CA;&#x4EE3;&#x7801;&#x66F4;&#x4F18;&#x96C5;&#xFF08;&#x6240;&#x6709;&#x884C;&#x4E3A;&#x90FD;&#x5728;&#x6570;&#x7EC4;&#x5B9A;&#x4E49;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF09;&#x3002;&#x72B6;&#x6001;&#x673A;&#x5165;&#x53E3;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65AD;&#x8A00;&#x4FDD;&#x969C;&#x72B6;&#x6001;&#x5408;&#x6CD5;&#xFF0C;&#x65E0;&#x9700;&#x5176;&#x4ED6;&#x5224;&#x65AD;&#x3002;</p>
-<p>code3:  <a target="_blank" rel="noopener" href="https://blog.csdn.net/zjzto/article/details/51799737">https://blog.csdn.net/zjzto/article/details/51799737</a></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;</span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*SFM_FUNCTION)</span><span class="params">()</span></span>;</span><br><span class="line">staic <span class="keyword">uint8_t</span> sSFMState;</span><br><span class="line"><span class="comment">//&#x63A7;&#x5236;&#x4F8B;&#x5B50;</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SFM_state0</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	open();</span><br><span class="line">    <span class="comment">// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span></span><br><span class="line">    <span class="keyword">if</span> (action = checkStateChange()) {</span><br><span class="line">      <span class="comment">// &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span></span><br><span class="line">      sSFMState = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">}             </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SFM_state1</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>{ </span><br><span class="line">    close();</span><br><span class="line">    <span class="comment">// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x6FC0;&#x53D1;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;</span></span><br><span class="line">    <span class="keyword">if</span> (action = checkStateChange()) {</span><br><span class="line">      <span class="comment">// &#x5BF9;&#x72B6;&#x6001;&#x673A;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</span></span><br><span class="line">      state = performStateChange(action);</span><br><span class="line">    }</span><br><span class="line">}   <span class="comment">//  next state;</span></span><br><span class="line">........</span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x6307;&#x9488;&#x6570;&#x7EC4;</span></span><br><span class="line"><span class="keyword">const</span> SFM_FUNCTION[] SFMStates_buf = { SFM_state0, SFM_state1, &#x2026;, SFM_stateM };</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SFM</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	assert(sSFMState &lt; M);	<span class="comment">// &#x6210;&#x7ACB;&#x6B63;&#x5E38;&#x8FD0;&#x884C;</span></span><br><span class="line">	(*SFMStates_buf[sSFMState])(); </span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&#x4E5F;&#x53EF;&#x518D;&#x6B21;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF1A;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">typedef enum</span><br><span class="line">{</span><br><span class="line">	OPEN,</span><br><span class="line">	CLOSE,</span><br><span class="line">	LOCK,</span><br><span class="line">	UNLOCK,</span><br><span class="line">};</span><br><span class="line">// &#x72B6;&#x6001;&#x673A;&#x7684;&#x7ED3;&#x6784;&#x4F53;</span><br><span class="line">typedef struct</span><br><span class="line">{</span><br><span class="line">	void (*action)(void);	// &#x6BCF;&#x4E00;&#x79CD;&#x72B6;&#x6001;&#x4E0B;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x52A8;&#x4F5C;</span><br><span class="line">	//uint8_t (*event)(void);	// &#x662F;&#x5426;&#x6709;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#xFF0C;&#x8FD9;&#x5E94;&#x8BE5;&#x662F;&#x5916;&#x90E8;&#x53D1;&#x751F;</span><br><span class="line">	uint8_t (*tranf)(void);	//&#x662F;&#x5426;&#x9700;&#x8981;&#x5916;&#x90E8;&#x8F6C;&#x6362;</span><br><span class="line">}FMS_ST;</span><br><span class="line">staic uint8_t sSFMState;</span><br><span class="line">FMS_ST SFMStates_buf[MAX_STATUES];</span><br><span class="line">SFMStates_buf[OPEN] = {open, checkStateChange1};</span><br><span class="line">......</span><br><span class="line">void SFM()</span><br><span class="line">{</span><br><span class="line">	assert(sSFMState &lt; M);	// &#x6210;&#x7ACB;&#x6B63;&#x5E38;&#x8FD0;&#x884C;</span><br><span class="line">	SFMStates_buf[sSFMState].action(); </span><br><span class="line">	sSFMState = SFMStates_buf[sSFMState].tranf();</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<p>&#x8FD8;&#x53EF;&#x7528;&#x72B6;&#x6001;&#x8868;&#x518D;&#x6B21;&#x7EE7;&#x7EED;&#x5C01;&#x88C5;&#xFF1A;&#x5C06;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x3001;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x4F1A;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x4EF6;&#x3001;&#x9700;&#x8DF3;&#x8F6C;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x3001;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x7684;&#x52A8;&#x4F5C;&#xFF1B;&#x90FD;&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#xFF0C;&#x5C31;&#x6210;N*4&#x7684;&#x77E9;&#x9635;&#x3002;&#x4E00;&#x5F00;&#x59CB;&#x7EF4;&#x62A4;&#x6574;&#x5F20;&#x8868;&#x6709;&#x4E9B;&#x96BE;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x671F;&#x7684;&#x6DFB;&#x52A0;&#x65B0;&#x4E8B;&#x4EF6;&#x3001;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x53EA;&#x9700;&#x8BE5;&#x8FD9;&#x5F20;&#x8868;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x8BE5;&#x4EE5;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.freesion.com/article/70781388174/">https://www.freesion.com/article/70781388174/</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.freesion.com/article/6759807345/">https://www.freesion.com/article/6759807345/</a></p>
-</li>
-</ul>
-<p>&#x5C06;code1&#x8FDB;&#x884C;&#x6539;&#x5199;&#x6210;code4&#xFF1A;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">typedef enum{</span><br><span class="line">  event_openDoor=1,</span><br><span class="line">  event_closeDoor,</span><br><span class="line">  event_lockDoor,</span><br><span class="line">  event_unlockDoor,</span><br><span class="line">  }EventID;</span><br><span class="line">  </span><br><span class="line">  typedef enum {</span><br><span class="line">  state_open = 1,</span><br><span class="line">  state_closed,</span><br><span class="line">  state_locked,</span><br><span class="line">  state_unlocked}</span><br><span class="line">State;</span><br><span class="line"></span><br><span class="line">typedef void Action(void);</span><br><span class="line"></span><br><span class="line">typedef struct {</span><br><span class="line">  State curState;//&#x5F53;&#x524D;&#x72B6;&#x6001;</span><br><span class="line">  EventID eventId;//&#x4E8B;&#x4EF6;ID</span><br><span class="line">  State nextState;//&#x4E0B;&#x4E2A;&#x72B6;&#x6001;</span><br><span class="line">  Action action;//&#x5177;&#x4F53;&#x8868;&#x73B0;}</span><br><span class="line">StateTransform;</span><br><span class="line"></span><br><span class="line">typedef struct{</span><br><span class="line">  State state;</span><br><span class="line">  int transNum;</span><br><span class="line">  StateTransform* transform;</span><br><span class="line">}StateMachine;</span><br><span class="line"></span><br><span class="line"> StateTransform stateTran[] = {</span><br><span class="line">  //{&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5230;&#x6765;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5C06;&#x8981;&#x8981;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x72B6;&#x6001;}</span><br><span class="line"> {state_open,   event_closeDoor, Open,  state_closed},//&#x56FE;&#x4E2D;open&#x5706;&#x51FA;&#x53BB;&#x7684;&#x7BAD;&#x5934;&#x6709;1&#x4E2A;</span><br><span class="line"> {state_closed, event_openDoor,  Close, state_open},</span><br><span class="line"> {state_closed, event_lockDoor,  Close, state_locked},</span><br><span class="line"> </span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line">// &#x72B6;&#x6001;&#x7684;&#x8F6C;&#x53D8;&#xFF0C;&#x9700;&#x8981;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5C06;&#x72B6;&#x6001;&#x673A;&#x548C;&#x4E8B;&#x4EF6;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;</span><br><span class="line">StateTransform* findTranss(StateMachine* pSM,  const EventID evt){</span><br><span class="line">  int i;</span><br><span class="line">  for (i = 0; i &lt; pSM-&gt;transNum; i++) {</span><br><span class="line">    if ((pSM-&gt;transform[i].curState == pSM-&gt;state) &amp;&amp; (pSM-&gt;transform[i].eventId == evt)) {</span><br><span class="line">      return &amp;pSM-&gt;transform[i];</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  return NULL;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="&#x8FDB;&#x9636;&#xFF1A;"><a href="#&#x8FDB;&#x9636;&#xFF1A;" class="headerlink" title="&#x8FDB;&#x9636;&#xFF1A;"></a>&#x8FDB;&#x9636;&#xFF1A;</h2><h2 id="&#x5C40;&#x9650;&#xFF1A;"><a href="#&#x5C40;&#x9650;&#xFF1A;" class="headerlink" title="&#x5C40;&#x9650;&#xFF1A;"></a>&#x5C40;&#x9650;&#xFF1A;</h2><h2 id="&#x6269;&#x5C55;"><a href="#&#x6269;&#x5C55;" class="headerlink" title="&#x6269;&#x5C55;"></a>&#x6269;&#x5C55;</h2><ul>
-<li><p>0 FSME&#xFF08;Finite State Machine Editor&#xFF09;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x72B6;&#x6001;&#x673A;&#x7684;&#x8F6F;&#x4EF6;&#x3002;</p>
-</li>
-<li><p>1 &#x5F02;&#x6B65;&#x56DE;&#x8C03;&#x6846;&#x67B6;&#x4E0B;&#xFF0C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5728;callback&#x91CC;&#x8C03;&#x7528;&#x72B6;&#x6001;&#x673A;&#x7C7B;&#x7684;change_state&#xFF0C;&#x72B6;&#x6001;&#x673A;&#x7C7B;&#x8D1F;&#x8D23;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;&#x76F8;&#x5E94;&#x72B6;&#x6001;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;callback&#xFF0C;&#x8FD9;&#x4E2A;&#x8C03;&#x7528;&#x94FE;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x957F;&#x6700;&#x540E;&#x6808;&#x6EA2;&#x51FA;&#x3002;<br>&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5B8C;&#x5168;&#x7528;<strong>&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;</strong>&#x4EE3;&#x66FF;&#x72B6;&#x6001;&#x673A;&#xFF0C;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x5C31;&#x53D1;&#x9001;xxx_state&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x7528;on_xxx_state&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5904;&#x7406;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x53D1;&#x9001;&#x66F4;&#x591A;&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;<br>&#x65E0;&#x8BBA;&#x54EA;&#x79CD;&#x60C5;&#x51B5;&#x90FD;&#x53EF;&#x4EE5;&#x7528;map&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x548C;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
-<p>&#x4F5C;&#x8005;&#xFF1A;&#x7075;&#x5251;<br>&#x94FE;&#x63A5;&#xFF1A;<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/31845498/answer/315977981">https://www.zhihu.com/question/31845498/answer/315977981</a><br>&#x6765;&#x6E90;&#xFF1A;&#x77E5;&#x4E4E;<br>&#x8457;&#x4F5C;&#x6743;&#x5F52;&#x4F5C;&#x8005;&#x6240;&#x6709;&#x3002;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x8054;&#x7CFB;&#x4F5C;&#x8005;&#x83B7;&#x5F97;&#x6388;&#x6743;&#xFF0C;&#x975E;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#x3002;</p>
-</li>
-<li><p>2 &#x6700;&#x8FD1;&#x51E0;&#x5E74;&#x67B6;&#x6784;&#x548C;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x7528;&#x7C7B;&#x4F3C;<strong>boost asio</strong>&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;&#x505A;&#x6838;&#x5FC3;&#x6846;&#x67B6;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x6269;&#x5145;&#x4E86;&#x4E0D;&#x5C11;&#x601D;&#x8DEF;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86; &#x6570;&#x636E;/&#x72B6;&#x6001;/function <strong>&#x65E0;&#x9501;&#x4EFB;&#x610F;&#x8C03;&#x5EA6;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x8DE8;&#x7EBF;&#x7A0B;&#x8DE8;cpu&#x8C03;&#x5EA6;&#xFF0C;&#x53EF;&#x4EE5;&#x6570;&#x636E;/&#x4EFB;&#x52A1;&#x53CC;&#x5411;&#x8C03;&#x5EA6;&#xFF0C;&#x5E94;&#x7528;&#x5C42;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x751F;&#x4EA7;&#x8005;/&#x6D88;&#x8D39;&#x8005;&#x6A21;&#x578B;&#x7684;&#x81EA;&#x9A71;&#x52A8;&#x6A21;&#x578B;&#x3002;</p>
-<p>&#x7531;&#x4E8E;&#x4E0A;&#x9762;&#x5B9E;&#x73B0;&#x4E86;&#x8DE8;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x636E;/&#x4EFB;&#x52A1;function&#x4EFB;&#x610F;&#x8C03;&#x5EA6;&#xFF0C;&#x4ECA;&#x5E74;&#x4F1A;&#x5C1D;&#x8BD5;&#x5B9E;&#x73B0;&#x4E00;&#x79CD;&#x5DE5;&#x5382;&#x6D41;&#x6C34;&#x7EBF;&#x65B9;&#x5F0F;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x6BCF;&#x4E2A;function&#x53EA;&#x5E72;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#xFF0C;function&#x4E4B;&#x95F4;&#x7528;<strong>&#x65E0;&#x9501;&#x961F;&#x5217;</strong>&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;/cpu&#x4E32;&#x8D77;&#x6216;&#x8005;&#x4EFB;&#x610F;&#x7EC4;&#x5408;&#x5F62;&#x6210;&#x6D41;&#x6C34;&#x7EBF;&#x67B6;&#x6784;&#xFF0C;</p>
-<p>&#x4F5C;&#x8005;&#xFF1A;&#x90ED;&#x5FE0;&#x660E;<br>&#x94FE;&#x63A5;&#xFF1A;<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/31845498/answer/316028802">https://www.zhihu.com/question/31845498/answer/316028802</a><br>&#x6765;&#x6E90;&#xFF1A;&#x77E5;&#x4E4E;<br>&#x8457;&#x4F5C;&#x6743;&#x5F52;&#x4F5C;&#x8005;&#x6240;&#x6709;&#x3002;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x8054;&#x7CFB;&#x4F5C;&#x8005;&#x83B7;&#x5F97;&#x6388;&#x6743;&#xFF0C;&#x975E;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#x3002;</p>
-</li>
-<li><p>3 &#x91CF;&#x5B50;&#x6A21;&#x578B;&#x662F;&#x5F88;&#x597D;&#x7684;&#x5C42;&#x6B21;&#x5F0F;&#x72B6;&#x6001;&#x673A;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</p>
-</li>
-<li><p>4 &#x6E38;&#x620F;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x7F16;&#x7A0B;&#x6848;&#x4F8B;&#x7CBE;&#x7CB9;</p>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/23/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-回调函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-回调函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -317,6 +212,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -324,16 +240,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/10/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/10/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/10/23/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/25/multi-client/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">multi-client</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -348,338 +332,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-multi-client" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/25/multi-client/">multi-client</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/25/multi-client/" class="archive-article-date">
-  	<time datetime="2021-09-25T03:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>&#x9700;&#x6C42;&#xFF1A;</li>
-</ul>
-<p> &#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x591A;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x3002;&#x5E76;&#x4E14;&#x8BFB;&#x5199;&#x5206;&#x79BB;&#xFF0C;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x5206;&#x5F00;&#x5904;&#x7406;&#x3002;</p>
-<p>&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x65B9;&#x6848;&#xFF1A;</p>
-<p>1&#x3001;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x5C31;&#x5F00;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;</p>
-<p>2&#x3001;&#x91C7;&#x7528;poll&#x95F4;&#x63A5;&#x8FDE;&#x63A5;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x662F;&#x5426;&#x6709;&#x8F93;&#x5165;</p>
-<p>&#x9879;&#x76EE;&#x5730;&#x5740;<a target="_blank" rel="noopener" href="https://github.com/LIUhansen/multiClient.git">!multiClient</a></p>
-        
-          <a class="article-more-a" href="/2021/09/25/multi-client/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Project</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Tcp</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/25/multi-client/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%84%E6%88%90%E5%88%86%E4%B8%BA3%E9%83%A8%E5%88%86%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">首先回调函数的使用组成分为3部分：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E9%9C%80%E6%B1%82%E6%9D%A5%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">按照需求来分类：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E8%B4%B9%E8%80%85%E4%BD%BF%E7%94%A8%E7%94%9F%E4%BA%A7%E8%80%85%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">消费者使用生产者函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E9%9C%80%E8%A7%A6%E5%8F%91%E6%B6%88%E8%B4%B9%E8%80%85%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C"><span class="toc-number">2.</span> <span class="toc-text">生产者需触发消费者函数执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A2%E6%98%AF%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%88%E6%98%AF%E7%94%9F%E4%BA%A7%E8%80%85"><span class="toc-number">3.</span> <span class="toc-text">既是消费者又是生产者</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-Create-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/20/Create-Blog/">Create Blog</a>
-    </h1>
   
 
-        
-        <a href="/2021/09/20/Create-Blog/" class="archive-article-date">
-  	<time datetime="2021-09-20T12:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x6839;&#x636E;B&#x7AD9;&#x7A0B;&#x5E8F;&#x7F8A;&#x7684;&#x89C6;&#x9891;&#x5C31;&#x884C;&#x90E8;&#x7F72;&#x7684;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x4E0B;&#xFF0C;&#x770B;&#x89C6;&#x9891;&#x6CE8;&#x610F;&#x5F39;&#x5E55;&#xFF0C;<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">codesheep</a></p>
-        
-          <a class="article-more-a" href="/2021/09/20/Create-Blog/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tool</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/20/Create-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/20/hello-world/">Hello Worlds</a>
-    </h1>
   
 
-        
-        <a href="/2021/09/20/hello-world/" class="archive-article-date">
-  	<time datetime="2021-09-20T12:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>&#x4F7F;&#x7528;Tpyora&#x6765;&#x7F16;&#x8F91;&#x4F60;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x63A8;&#x5230;&#x7F51;&#x7AD9;&#x4E0A;&#x53BB;&#x3002;</p>
-<p>&#x6709;&#x4E00;&#x4E9B;&#x7F16;&#x8F91;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x4E1C;&#x897F;</p></li></ul>
-        
-          <a class="article-more-a" href="/2021/09/20/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tool</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/20/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Source-Insight-keyWord" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/20/Source-Insight-keyWord/">Source Insight keyWord</a>
-    </h1>
   
 
-        
-        <a href="/2021/09/20/Source-Insight-keyWord/" class="archive-article-date">
-  	<time datetime="2021-09-20T10:44:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>source insight&#x5BF9;&#x4E8E;&#x5D4C;&#x5165;&#x5F0F;&#x4EA4;&#x53C9;&#x7F16;&#x8BD1;&#x6765;&#x8BF4;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7528;&#x5230;&#xFF0C;&#x800C;&#x4E14;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7F16;&#x7A0B;&#x7684;&#x89C4;&#x8303;&#x6027;&#xFF0C;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5934;&#xFF0C;&#x51FD;&#x6570;&#x5934;&#x7B49;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5FEB;&#x6377;&#x952E;&#xFF0C;&#x65B9;&#x4FBF;&#x3001;&#x5FEB;&#x6377;&#x3002;</p>
-        
-          <a class="article-more-a" href="/2021/09/20/Source-Insight-keyWord/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tool</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">source insight</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/20/Source-Insight-keyWord/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -709,8 +387,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
