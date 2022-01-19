@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>回调函数（一） | Blog Share</title>
+  <title>Tag: C语言基础 | Blog Share</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x9996;&amp;#x5148;&amp;#x56DE;&amp;#x8C03;&amp;#x51FD;&amp;#x6570;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7EC4;&amp;#x6210;&amp;#x5206;&amp;#x4E3A;3&amp;#x90E8;&amp;#x5206;&amp;#xFF1A; &amp;#x51FD;&amp;#x6570;&amp;#x4F53;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x5B9E;&amp;#x73B0; Compi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="回调函数（一）">
-<meta property="og:url" content="http://example.com/2021/10/24/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog Share">
+<meta property="og:url" content="http://example.com/tags/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Blog Share">
-<meta property="og:description" content="&amp;#x9996;&amp;#x5148;&amp;#x56DE;&amp;#x8C03;&amp;#x51FD;&amp;#x6570;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x7EC4;&amp;#x6210;&amp;#x5206;&amp;#x4E3A;3&amp;#x90E8;&amp;#x5206;&amp;#xFF1A; &amp;#x51FD;&amp;#x6570;&amp;#x4F53;&amp;#x529F;&amp;#x80FD;&amp;#x7684;&amp;#x5B9E;&amp;#x73B0; Compi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-24T13:03:41.000Z">
-<meta property="article:modified_time" content="2021-10-24T13:07:27.220Z">
 <meta property="article:author" content="Hansen Liu">
-<meta property="article:tag" content="code idea">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Blog Share" type="application/atom+xml">
@@ -155,242 +150,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-回调函数（一）" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      回调函数（一）
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/01/16/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-define/" class="archive-article-date">
+  	<time datetime="2022-01-16T06:41:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/01/16/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89-define/">C语言基础（一）:define,#,##</a>
     </h1>
   
 
-        
-        <a href="/2021/10/24/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-10-24T13:03:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="&#x9996;&#x5148;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x7EC4;&#x6210;&#x5206;&#x4E3A;3&#x90E8;&#x5206;&#xFF1A;"><a href="#&#x9996;&#x5148;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x7EC4;&#x6210;&#x5206;&#x4E3A;3&#x90E8;&#x5206;&#xFF1A;" class="headerlink" title="&#x9996;&#x5148;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x7EC4;&#x6210;&#x5206;&#x4E3A;3&#x90E8;&#x5206;&#xFF1A;"></a>&#x9996;&#x5148;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x7EC4;&#x6210;&#x5206;&#x4E3A;3&#x90E8;&#x5206;&#xFF1A;</h3><ul>
-<li><p>&#x51FD;&#x6570;&#x4F53;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0; Compile</p>
-</li>
-<li><p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6CE8;&#x518C; Register</p>
-</li>
-<li><p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C; Execute</p>
-</li>
-</ul>
-<ul>
-<li>&#x9884;&#x7559;&#x63A5;&#x53E3;&#xFF08;&#x662F;&#x4E0D;&#x662F;&#x8FD8;&#x9700;&#x8981;&#x8FD9;&#x4E2A;&#xFF09;</li>
-</ul>
-<p>&#x4E8E;&#x6B64;&#x5BF9;&#x5E94;&#x7684;&#x4E5F;&#x53EF;&#x4EE5;&#x5206;&#x6210;3&#x65B9;&#xFF0C;&#x6216;&#x8005;3&#x4E2A; .c &#x91CC;&#x5206;&#x522B;&#x5B9E;&#x73B0;&#x8FD9;3&#x90E8;&#x5206;&#xFF1B;&#x4E5F;&#x6709;&#x53EF;&#x80FD;Cp&amp;Rg&#x5728;&#x540C;&#x4E00;.c &#x91CC;&#xFF1B;</p>
-<p>&#x63A5;&#x4E0B;&#x6765;&#x6309;&#x7167;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x9700;&#x6C42;&#x6765;&#x7406;&#x89E3;&#x3002;</p>
-<span id="more"></span>
-
-<h2 id="&#x6309;&#x7167;&#x9700;&#x6C42;&#x6765;&#x5206;&#x7C7B;&#xFF1A;"><a href="#&#x6309;&#x7167;&#x9700;&#x6C42;&#x6765;&#x5206;&#x7C7B;&#xFF1A;" class="headerlink" title="&#x6309;&#x7167;&#x9700;&#x6C42;&#x6765;&#x5206;&#x7C7B;&#xFF1A;"></a>&#x6309;&#x7167;&#x9700;&#x6C42;&#x6765;&#x5206;&#x7C7B;&#xFF1A;</h2><h3 id="&#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;&#x751F;&#x4EA7;&#x8005;&#x51FD;&#x6570;"><a href="#&#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;&#x751F;&#x4EA7;&#x8005;&#x51FD;&#x6570;" class="headerlink" title="&#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;&#x751F;&#x4EA7;&#x8005;&#x51FD;&#x6570;"></a>&#x6D88;&#x8D39;&#x8005;&#x4F7F;&#x7528;&#x751F;&#x4EA7;&#x8005;&#x51FD;&#x6570;</h3><p>&#x4F7F;&#x7528;&#x65B9;&#x662F;&#x81EA;&#x5DF1;&#xFF08;&#x6D88;&#x8D39;&#x8005;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x5B9A;&#x4E49;&#x65B9;&#xFF08;&#x751F;&#x4EA7;&#x8005;&#xFF09;&#x662F;&#x522B;&#x4EBA;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x7559;&#x4E0B;&#x63A5;&#x53E3;&#x8BA9;&#x522B;&#x4EBA;&#x6CE8;&#x518C;&#x8FDB;&#x6765;&#xFF1B;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5C5E;&#x4E8E;&#x5E95;&#x5C42;&#x6216;&#x8005;&#x540C;&#x5C42;&#x3002;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#x5199;&#x6210;code1&#x3002;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x4EBA;&#x6CE8;&#x518C;&#xFF0C;&#x6709;&#x5C31;&#x6267;&#x884C;&#x56DE;&#x8C03;&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x7565;&#x8FC7;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#x3002;</p>
-<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x7528;&#x56DE;&#x8C03;&#x8BE5;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#xFF1F;&#x5C31;&#x662F;&#x5F53;&#x6D88;&#x8D39;&#x8005;&#x9700;&#x8981;&#x7528;&#x51FD;&#x6570;&#x662F;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x51FD;&#x6570;&#x5373;&#x53EF;&#xFF0C;&#x5C31;&#x548C;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7528;&#x522B;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x4E00;&#x6837;&#x3002;&#x4F46;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x7528;&#x7684;&#x51FD;&#x6570;&#x662F;&#x540C;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5982;case 1, funB1, case 2 funB2, &#xFF1B;&#x5982;&#x679C;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C31;&#x76F4;&#x63A5;&#x5B9A;&#x4E49;&#x6210;&#x7ED3;&#x6784;&#x4F53;&#x6570;&#x7EC4;&#xFF0C;Ause[2].funB()&#x3002;</p>
-<p>&#x8FD9;&#x6837;&#x4F3C;&#x4E4E;&#x4E0D;&#x80FD;&#x4F53;&#x73B0;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x4F18;&#x8D8A;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C31;&#x80FD;&#x505A;&#x5230;&#x751F;&#x4EA7;&#x8005;&#x4E0E;&#x6D88;&#x8D39;&#x8005;&#x5206;&#x79BB;&#xFF0C;&#x56E0;&#x4E3A;&#x751F;&#x6210;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x91CC;&#x53EF;&#x4EE5;&#x4E0D;&#x5305;&#x542B;&#x4E00;&#x884C;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x8026;&#x5408;&#x6027;&#x5C31;&#x964D;&#x4F4E;&#x4E86;&#x3002;&#x5373;&#x4F7F;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x4EE3;&#x7801;&#x4E00;&#x884C;&#x90FD;&#x6CA1;&#x5199;&#xFF0C;&#x6211;&#x4E5F;&#x53EF;&#x4EE5;&#x52A8;&#x624B;&#x5199;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x5148;&#x5B9A;&#x4E49;&#x597D;&#x5F62;&#x53C2;&#x3002;</p>
-<ul>
-<li><p>code1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">typedef struct </span><br><span class="line">{</span><br><span class="line">&#x200B;	(void)(* funB)(void);  </span><br><span class="line">} A_CALLBACK;	// &#x5B9A;&#x4E49;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A_CALLBACK Ause = {CompilefunB};	// &#x5B9E;&#x4F8B;&#x5316;</span><br><span class="line"></span><br><span class="line">if(Ause.funB){</span><br><span class="line">    Ause.funB();	}// &#x4F7F;&#x7528;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="&#x751F;&#x4EA7;&#x8005;&#x9700;&#x89E6;&#x53D1;&#x6D88;&#x8D39;&#x8005;&#x51FD;&#x6570;&#x6267;&#x884C;"><a href="#&#x751F;&#x4EA7;&#x8005;&#x9700;&#x89E6;&#x53D1;&#x6D88;&#x8D39;&#x8005;&#x51FD;&#x6570;&#x6267;&#x884C;" class="headerlink" title="&#x751F;&#x4EA7;&#x8005;&#x9700;&#x89E6;&#x53D1;&#x6D88;&#x8D39;&#x8005;&#x51FD;&#x6570;&#x6267;&#x884C;"></a>&#x751F;&#x4EA7;&#x8005;&#x9700;&#x89E6;&#x53D1;&#x6D88;&#x8D39;&#x8005;&#x51FD;&#x6570;&#x6267;&#x884C;</h3><p>&#x53E6;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#xFF1A;&#x81EA;&#x5DF1;&#x662F;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x4E3B;&#x52A8;&#x901A;&#x77E5;&#x6D88;&#x8D39;&#x8005;&#x5DF2;&#x7ECF;&#x751F;&#x4EA7;&#x5B8C;&#x6BD5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x4E3B;&#x52A8;&#x95EE;&#x8BE2;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x53EF;&#x5148;&#x9884;&#x7559;&#x51FA;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#xFF0C;&#x8BA9;&#x6D88;&#x8D39;&#x8005;&#x6CE8;&#x518C;&#x8FDB;&#x6765;&#x3002;&#x8FD9;&#x65F6;&#x80FD;&#x8FBE;&#x5230;&#x7684;&#x6548;&#x679C;&#x5C31;&#x662F;&#x751F;&#x4EA7;&#x8005;&#x80FD;&#x89E6;&#x53D1;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x5E95;&#x5C42;&#x89E6;&#x53D1;&#x6267;&#x884C;&#x4E0A;&#x5C42;&#x7684;&#x51FD;&#x6570;&#x3002;&#x63A5;&#x53E3;&#x5F62;&#x5F0F;&#x5199;&#x6210;code1&#x3002;</p>
-<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4F3C;&#x4E4E;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x56DE;&#x8C03;&#xFF0C;&#x5C31;&#x8DDF;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x751F;&#x4EA7;&#x8005;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x884C;&#xFF0C;&#x4F46;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x5E95;&#x5C42;&#x8C03;&#x7528;&#x4E86;&#x9AD8;&#x5C42;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
-<p>&#x8FD9;&#x6837;&#x5F88;&#x5BB9;&#x6613;&#x4EA7;&#x751F;&#x5934;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x5934;&#x6587;&#x4EF6;&#x7684;&#x5305;&#x542B;&#x90FD;&#x662F;&#x5355;&#x5411;&#x5305;&#x542B;&#xFF0C;&#x9AD8;&#x5C42;&#x5305;&#x542B;&#x5E95;&#x5C42;&#xFF0C;&#x5E95;&#x5C42;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x53BB;&#x5305;&#x542B;&#x9AD8;&#x5C42;&#x3002;&#x8FD9;&#x65F6;&#x7528;&#x56DE;&#x8C03;&#x5C31;&#x80FD;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x9AD8;&#x5C42;&#x6CE8;&#x518C;&#x5E95;&#x5C42;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x6700;&#x7EC8;&#x8FD9;&#x4E2A;&#x9AD8;&#x5C42;&#x51FD;&#x6570;&#x5C31;&#x80FD;&#x5728;&#x5E95;&#x5C42;&#x8FD0;&#x884C;&#x4E86;&#x3002;</p>
-<p>tips: &#x5F53;&#x6D88;&#x8D39;&#x8005;A&#xFF0C;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x8FDB;&#x53BB;&#x4E86;&#xFF0C;&#x6D88;&#x8D39;&#x8005;B&#xFF0C;&#x4E5F;&#x60F3;&#x6CE8;&#x518C;&#x8FDB;&#x53BB;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#x3002;&#x518D;&#x5199;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x6709;&#x4FE9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void CompilefunBAndA()</span><br><span class="line">{</span><br><span class="line">	CompilefunB();</span><br><span class="line">	CompilefunA();</span><br><span class="line">}</span><br><span class="line">A_CALLBACK Ause = {CompilefunBAndA};	// &#x5B9E;&#x4F8B;&#x5316;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="&#x65E2;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x53C8;&#x662F;&#x751F;&#x4EA7;&#x8005;"><a href="#&#x65E2;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x53C8;&#x662F;&#x751F;&#x4EA7;&#x8005;" class="headerlink" title="&#x65E2;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x53C8;&#x662F;&#x751F;&#x4EA7;&#x8005;"></a>&#x65E2;&#x662F;&#x6D88;&#x8D39;&#x8005;&#x53C8;&#x662F;&#x751F;&#x4EA7;&#x8005;</h3><p> &#x9700;&#x8981;&#x81EA;&#x5DF1;&#x8D1F;&#x8D23;&#x7684;&#x529F;&#x80FD;&#x5199;&#x6210;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1B;&#x4F46;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;A&#x91CC;&#x6709;&#x9700;&#x8981;&#x522B;&#x4EBA;&#x8D1F;&#x8D23;&#x7684;&#x90E8;&#x5206;B</p>
-<ul>
-<li><p>code2&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7528;&#x51FD;&#x6570;A&#x7684;&#x53C2;&#x6570;&#x662F;&#x51FD;&#x6570;B_callback&#xFF0C;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x53EF;&#x6709;&#x4E0A;&#x9762;&#x7684;1&#x6216;2&#xFF1B;</p>
-<ul>
-<li><p>&#x522B;&#x4EBA;&#x89E6;&#x53D1;A&#x7684;&#x6267;&#x884C;&#xFF0C;&#x6211;&#x8D1F;&#x8D23;&#x89E6;&#x53D1;B&#x7684;&#x63D0;&#x4F9B;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x51FD;&#x6570;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void funA( void (*B_callback) (void ) );</span><br></pre></td></tr></table></figure>
-
-<p>&#x5BF9;&#x4E8E;&#x81EA;&#x5DF1;A&#x6765;&#x8BF4;&#x4E0D;&#x7BA1;&#x6267;&#x884C;&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#xFF1B;&#x4F46;&#x662F;&#x7BA1;B&#x7684;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#xFF0C;&#x4E0D;&#x7BA1;B&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
-<p>&#x5BF9;&#x4E8E;B&#x65B9;&#x6765;&#x8BF4;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;funA&#xFF08;&#x89E6;&#x53D1;A&#x6267;&#x884C;&#xFF09;&#xFF0C;&#x548C;&#x5B9E;&#x73B0;B_callback&#x7684;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#xFF0C;</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>&#x5982;&#x679C;&#x7B2C;&#x4E09;&#x5C42;&#x60F3;&#x8981;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x56DE;&#x8C03;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;code3.</p>
-<ul>
-<li><p>code3:</p>
-</li>
-<li><pre><code>typedef struct 
-{
-    (void)(* RegFunB)(void (*funB) (void) );
-} A_callBack;
-</code></pre>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">code idea</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C语言基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/24/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/10/24/%E7%8A%B6%E6%80%81%E6%9C%BA%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          状态机（一）
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/09/25/multi-client/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">multi-client</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%84%E6%88%90%E5%88%86%E4%B8%BA3%E9%83%A8%E5%88%86%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">首先回调函数的使用组成分为3部分：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E7%85%A7%E9%9C%80%E6%B1%82%E6%9D%A5%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">按照需求来分类：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E8%B4%B9%E8%80%85%E4%BD%BF%E7%94%A8%E7%94%9F%E4%BA%A7%E8%80%85%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">消费者使用生产者函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E8%80%85%E9%9C%80%E8%A7%A6%E5%8F%91%E6%B6%88%E8%B4%B9%E8%80%85%E5%87%BD%E6%95%B0%E6%89%A7%E8%A1%8C"><span class="toc-number">2.</span> <span class="toc-text">生产者需触发消费者函数执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A2%E6%98%AF%E6%B6%88%E8%B4%B9%E8%80%85%E5%8F%88%E6%98%AF%E7%94%9F%E4%BA%A7%E8%80%85"><span class="toc-number">3.</span> <span class="toc-text">既是消费者又是生产者</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -420,9 +233,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
