@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>编程规范学习一：c语言规范 | Blog Share</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x89C4;&amp;#x5219;&amp;#xFF1A;&amp;#x4E00;&amp;#x5B9A;&amp;#x8981;&amp;#x9075;&amp;#x5B88;&amp;#x7684; &amp;#x6839;&amp;#x636E;&amp;#x7F51;&amp;#x4E0A;&amp;#x627E;&amp;#x7684;&amp;#x534E;&amp;#x4E3A;&amp;#x7F16;&amp;#x7A0B;&amp;#x89C4;&amp;#x8303;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60">
+  <meta name="description" content="&amp;#x6839;&amp;#x636E;&amp;#x7F51;&amp;#x4E0A;&amp;#x627E;&amp;#x7684;&amp;#x534E;&amp;#x4E3A;&amp;#x7F16;&amp;#x7A0B;&amp;#x89C4;&amp;#x8303;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60;&amp;#xFF1A;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编程规范学习一：c语言规范">
 <meta property="og:url" content="http://example.com/2022/03/13/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83%E5%AD%A6%E4%B9%A0%E4%B8%80%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="Blog Share">
-<meta property="og:description" content="&amp;#x89C4;&amp;#x5219;&amp;#xFF1A;&amp;#x4E00;&amp;#x5B9A;&amp;#x8981;&amp;#x9075;&amp;#x5B88;&amp;#x7684; &amp;#x6839;&amp;#x636E;&amp;#x7F51;&amp;#x4E0A;&amp;#x627E;&amp;#x7684;&amp;#x534E;&amp;#x4E3A;&amp;#x7F16;&amp;#x7A0B;&amp;#x89C4;&amp;#x8303;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60">
+<meta property="og:description" content="&amp;#x6839;&amp;#x636E;&amp;#x7F51;&amp;#x4E0A;&amp;#x627E;&amp;#x7684;&amp;#x534E;&amp;#x4E3A;&amp;#x7F16;&amp;#x7A0B;&amp;#x89C4;&amp;#x8303;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60;&amp;#xFF1A;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-13T09:09:22.000Z">
-<meta property="article:modified_time" content="2022-03-13T09:19:05.281Z">
+<meta property="article:modified_time" content="2022-03-13T09:31:32.990Z">
 <meta property="article:author" content="Hansen Liu">
 <meta name="twitter:card" content="summary">
   
@@ -174,8 +174,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x89C4;&#x5219;&#xFF1A;&#x4E00;&#x5B9A;&#x8981;&#x9075;&#x5B88;&#x7684;</p>
-<p>&#x6839;&#x636E;&#x7F51;&#x4E0A;&#x627E;&#x7684;&#x534E;&#x4E3A;&#x7F16;&#x7A0B;&#x89C4;&#x8303;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF1A;</p>
+        <p>&#x6839;&#x636E;&#x7F51;&#x4E0A;&#x627E;&#x7684;&#x534E;&#x4E3A;&#x7F16;&#x7A0B;&#x89C4;&#x8303;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF1A;</p>
+<span id="more"></span>
+
+<p>&#x89C4;&#x5219;&#xFF1A;&#x4E00;&#x5B9A;&#x8981;&#x9075;&#x5B88;&#x7684;</p>
 <p>&#x5EFA;&#x8BAE;&#xFF1A;</p>
 <h1 id="1-&#x5934;&#x6587;&#x4EF6;"><a href="#1-&#x5934;&#x6587;&#x4EF6;" class="headerlink" title="1 &#x5934;&#x6587;&#x4EF6;"></a>1 &#x5934;&#x6587;&#x4EF6;</h1><p>&#x5934;&#x6587;&#x4EF6;&#x6307;&#x7684;&#x662F;.h &#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;.c &#x4E00;&#x822C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;.h&#xFF0C;&#x4E5F;&#x6709;&#x6761;&#x4EF6;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;.h &#x5BF9;&#x5E94;&#x591A;&#x4E2A;.c&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x7F16;&#x8BD1;&#x5B8F;&#xFF0C;&#x8FDB;&#x5165;&#x4E0D;&#x540C;&#x7684;.c</p>
 <p>&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;.h &#x53EF;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x610F;&#x7684;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x5176;&#x4ED6;.h&#xFF0C;&#x56E0;&#x4E3A;.h&#x53EA;&#x662F;&#x7533;&#x660E;&#x5BF9;&#x5916;&#x63A5;&#x53E3;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x91CC;&#x9762;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x7ED3;&#x6784;&#x4F53;&#xFF1B;</p>
