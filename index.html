@@ -173,47 +173,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&#x5E38;&#x91CF;&#x5F97;&#x4F7F;&#x7528;&#x7B97;&#x662F;&#x907F;&#x65E0;&#x53EF;&#x907F;&#xFF0C;&#x603B;&#x7ED3;&#x4E00;&#x4E9B;&#x81EA;&#x5DF1;&#x8E29;&#x8FC7;&#x5F97;&#x5751;&#x3002;</p>
-<!----more>
-
-# 数字常量
-
-数字常量得类型，许多人已经能重视，
-
-需要注意得是，C语言中存在隐式类型转换，往数字域大得范围扩。
-
-- 对于立即数，能加后缀的加上后缀
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0x01</span>UL</span><br><span class="line"><span class="keyword">long</span> l = <span class="number">0x80000000</span>L;           <span class="comment">// 后缀：l/L</span></span><br><span class="line"><span class="keyword">unsigned</span> ul = <span class="number">0x80000000</span>UL;     <span class="comment">// 后缀：U、L，顺序和大小写无关</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使用宏定义参与位运算的标志常量</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FLAG_XXX        0x0001</span></span><br><span class="line">flags &amp; FLAG_XXX;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h1><p>对于很长得字符串，可以拆成多行来写：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* filename = <span class="string">&quot;/home/&quot;</span> </span><br><span class="line">						<span class="string">&quot;user/&quot;</span>  </span><br><span class="line">						<span class="string">&quot;AAA&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>字符串拼接snprintf 替代sprintf</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">snprintf</span>(buf, <span class="keyword">sizeof</span>(buf), <span class="string">&quot;/home/%s&quot;</span></span><br><span class="line">             <span class="string">&quot;/%s&quot;</span> FILE_EXT_TXT,</span><br><span class="line">            user_name, file_name);</span><br><span class="line"><span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// snprintf error</span></span><br><span class="line">        assert(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="原子字符串"><a href="#原子字符串" class="headerlink" title="原子字符串"></a>原子字符串</h1><ul>
-<li>原子字符串（AtomString，也叫 Quark）表示一个可以唯一性确定一个字符串常量的整数值</li>
-<li>背后的数据结构是一个 AVL 树或者是红黑树，保存着字符串常量和整数之间的一一映射关系</li>
-</ul>
-<p>优点：</p>
-<ul>
-<li>原先要分配缓冲区存储指针的地方，现在只需要存储一个整数</li>
-<li>原先调用 <code>strcmp</code> 对比字符串的地方，现在可使用 <code>==</code> 直接对比</li>
-<li>原先使用复杂判断的地方，现在可以使用 <code>switch</code> 语句</li>
-</ul>
-<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><p><a target="_blank" rel="noopener" href="https://courses.fmsoft.cn/best-practices-of-c/constants.html">https://courses.fmsoft.cn/best-practices-of-c/constants.html</a></p>
--->
+        
+          <a class="article-more-a" href="/2022/04/08/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E4%BC%9A%E5%B8%B8%E9%87%8F/#more">more >></a>
+        
       
 
       
@@ -287,32 +249,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x4F7F;&#x7528;&#x679A;&#x4E3E;&#x65F6;&#x9047;&#x5230;&#x7684;&#x5751;&#x3002;</p>
-<!----more>
-
-#  枚举占用字节大小
-
-需要根据自己编译器的尝试后才知道。我遇到的是4字节。并不是网上所有按照枚举的最大值。
-
-例如：
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_INIT = <span class="number">1</span>,</span><br><span class="line">    ...</span><br><span class="line">    CMD_MAX = <span class="number">10</span>,</span><br><span class="line">&#125;CMD_EN;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_INIT1 = <span class="number">1</span>,</span><br><span class="line">    ...</span><br><span class="line">    CMD_INT2 = <span class="number">0x01</span>,</span><br><span class="line">    ..</span><br><span class="line">    CMD_GUN_MAX = <span class="number">0x110</span>，</span><br><span class="line">&#125;CMD_GUN_EN;</span><br></pre></td></tr></table></figure>
-
-<p>最终尝试的结果 CMD_EN 和 CMD_GUN_EN 都是4字节。</p>
-<p>如果想让枚举占据的字节数为最大值需要的字节数，则需要加上编译选项：</p>
-<p><code>gcc -fshort-enums ...</code></p>
-<p>这样就能使CMD_EN 的大小为1字节，CMD_GUN_EN 为2字节。</p>
-<p>为了让这种编译器的不确定性，可以直接自个指定4字节</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_INIT1 = <span class="number">1</span>,</span><br><span class="line">    ...</span><br><span class="line">    CMD_INT2 = <span class="number">0x01</span>,</span><br><span class="line">    ..</span><br><span class="line">    CMD_GUN_MAX = <span class="number">0x110</span>，</span><br><span class="line">    CMD_GUN_MAX_32BIT = <span class="number">0xFFFFFFFF</span>,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="枚举的值怎么设"><a href="#枚举的值怎么设" class="headerlink" title="枚举的值怎么设"></a>枚举的值怎么设</h1><p>首先来看代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以将一个枚举的值赋给另一个枚举，也就是枚举里的值可以重复</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_FIRST = <span class="number">1</span>,</span><br><span class="line">    CMD_INIT1 = CMD_FIRST,</span><br><span class="line">    ...</span><br><span class="line">    CMD_INT2 = <span class="number">0x01</span>,</span><br><span class="line">    ..</span><br><span class="line">    CMD_GUN_MAX = <span class="number">0x110</span>,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 枚举里的值，可以错序</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_FIRST = <span class="number">1</span>,</span><br><span class="line">    CMD_INIT1 = CMD_FIRST,</span><br><span class="line">    CMD_SEND1 = <span class="number">0x10</span>,</span><br><span class="line">    </span><br><span class="line">    CMD_INT2 = <span class="number">0x02</span>,</span><br><span class="line">    CMD_SEND2 = <span class="number">0x12</span>,</span><br><span class="line">    </span><br><span class="line">    CMD_GUN_MAX = <span class="number">0x110</span>,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br></pre></td></tr></table></figure>
-
-<p>枚举值具体值得设定，可以自己预留一些值，方便后续插入，将不同类型得值间隔开，对比下面两种赋值。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_FIRST = <span class="number">1</span>,</span><br><span class="line">    CMD_INIT = CMD_FIRST,</span><br><span class="line">    CMD_SEND,</span><br><span class="line">    CMD_RECV,</span><br><span class="line">    CMD_GUN_MAX,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_FIRST = <span class="number">1</span>,</span><br><span class="line">    CMD_INIT = CMD_FIRST,</span><br><span class="line">    CMD_SEND = <span class="number">0x10</span>,</span><br><span class="line">    CMD_RECV = <span class="number">0x20</span>,</span><br><span class="line">    CMD_GUN_MAX,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果后续你需要往A~F不同字节点发数据，而这里得代码需要和别人一起维护，</span></span><br><span class="line"><span class="comment">// 别人不想改动旧代码，这时你就会往后添加</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span></span><br><span class="line">    CMD_FIRST = <span class="number">1</span>,</span><br><span class="line">    CMD_INIT = CMD_FIRST,</span><br><span class="line">    CMD_SEND,</span><br><span class="line">    CMD_RECV,</span><br><span class="line">    CMD_SEND_2,</span><br><span class="line">    ...</span><br><span class="line">    CMD_SEND_F,</span><br><span class="line">    </span><br><span class="line">    CMD_GUN_MAX,</span><br><span class="line">&#125;CMD_GUN_EN;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 而你的逻辑代码很可能就会变成</span></span><br><span class="line">doFUn[<span class="number">0xF</span>];</span><br><span class="line"><span class="keyword">switch</span>(CMD)&#123;</span><br><span class="line">    <span class="keyword">case</span> CMD_SEND:</span><br><span class="line">        doFUn[<span class="number">0</span>];</span><br><span class="line">    	<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> CMD_SEND2:</span><br><span class="line">    <span class="keyword">case</span> CMD_SEND3:</span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">case</span> CMD_SENDF:</span><br><span class="line">        doFUn[CMD - CMD_SEND2];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这时候你就会发现，如果一开始就使用第二种枚举值就会非常方便</span></span><br><span class="line"><span class="comment">// 而不会将逻辑拆分了，当初一个值得设定就会后来维护添加太多不难受</span></span><br><span class="line">doFUn[CMD - CMD_SEND];</span><br></pre></td></tr></table></figure>
-
--->
+        
+          <a class="article-more-a" href="/2022/04/08/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E4%BC%9A%E6%9E%9A%E4%B8%BE/#more">more >></a>
+        
       
 
       
